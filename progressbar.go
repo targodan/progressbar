@@ -1013,8 +1013,8 @@ type Reader struct {
 }
 
 // NewReader return a new Reader with a given progress bar.
-func NewReader(r io.Reader, bar *ProgressBar) Reader {
-	return Reader{
+func NewReader(r io.Reader, bar *ProgressBar) *Reader {
+	return &Reader{
 		Reader: r,
 		bar:    bar,
 	}
